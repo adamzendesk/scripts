@@ -35,17 +35,18 @@ $.ajax({
 // Signed out of Zendesk make a GET request using the newly minted token for auth. This example is a CORS request to another brand's Help Center 
 // which is only possible using OAuth
 //
-$.ajax({crossOrigin: true,
-async: true, 
-url: 'https://{SUBDOMAIN}.zendesk.com/api/v2/help_center/en-us/articles.json', 
-contentType:'application/json',
-beforeSend : function( xhr ) {
-    xhr.setRequestHeader( 'Authorization', 'BEARER ' + oauth_token);
-},
-success: function(data){console.log(data);},
-failure: function(errMsg) {
-    alert(errMsg);
-},
-type: 'GET'
+$.ajax({
+	crossOrigin: true,
+	async: true, 
+	url: 'https://{SUBDOMAIN}.zendesk.com/api/v2/help_center/en-us/articles.json', 
+	contentType:'application/json',
+	beforeSend : function( xhr ) {
+	    xhr.setRequestHeader( 'Authorization', 'BEARER ' + oauth_token);
+	},
+	success: function(data){console.log(data);},
+	failure: function(errMsg) {
+	    alert(errMsg);
+	},
+	type: 'GET'
 }); 
 
