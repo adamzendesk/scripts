@@ -8,7 +8,7 @@ password = "{password}"
 identifier = "python_oauth_client"
 
 # zendesk subdomain
-subdomain = "wizardsleeves"
+subdomain = "{subdomain}"
 
 # encode basic auth credentials for use in pycurls headers for requests
 headers = { 'Authorization' : 'Basic %s' % base64.b64encode(username+':'+password), 'Content-Type': 'application/json' }
