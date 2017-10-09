@@ -2,14 +2,14 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-# Set global variables for use in each method, replace strings in curly brackets with your own
+# Set global variables for use in each method, replace strings in curly brackets with your own 
 username = "{username}"
 password = "{password}"
 identifier = "ruby_oauth_client_x"
 header = {'Content-Type': 'application/json'}
 subdomain = "{subdomain}"
 
-# Create your OAuth client in Zendesk, return the client ID for use in getOauthtoken
+# Create your OAuth client in Zendesk, return the client ID for use in getOauthtoken 
 def createClient(subdomain, username, password, identifier, header)
 	payload = {client: {
                    name: 'Ruby HTTP Request',
